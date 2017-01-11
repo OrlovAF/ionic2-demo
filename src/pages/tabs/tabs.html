@@ -1,0 +1,104 @@
+<ion-slides #vSlider [options]="vSliderOptions">
+
+  <ion-slide class="bg-primary">
+    <ion-header no-border>
+      <ion-toolbar color="primary">
+        <ion-buttons left>
+          <button ion-button icon-only (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+
+      </ion-toolbar>
+    </ion-header>
+
+    <h2 class="text-white">${{total}}<br>TOTAL AMMOUNT INFO</h2>
+    <br>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+
+          <ion-item *ngFor="let item of items">
+            <ion-avatar item-left class="avatar-initials avatar-initials-bg-{{item.initialsBg}}">{{ item.initials }}
+            </ion-avatar>
+            <h2>
+              <small>{{ item.house }}</small>
+              {{ item.street }} |
+              <small>{{ item.city }}</small>
+            </h2>
+            <p>{{ item.country }}</p>
+            <div item-right>{{ item.price[tabIndex] }}</div>
+          </ion-item>
+
+        </ion-list>
+
+        <button ion-button (click)="notImplemented()">DEPOSIT</button>
+
+        <button ion-button outline (click)="notImplemented()">CASH OUT</button>
+
+      </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <div class="half-bg-primary"></div>
+
+    <ion-header no-border>
+      <ion-toolbar color="primary">
+        <ion-buttons right>
+          <button ion-button icon-only (click)="refresh()">
+            <ion-icon name="refresh"></ion-icon>
+          </button>
+        </ion-buttons>
+
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-slides #hSlider (ionDidChange)="onSlideChanged()" [options]="hSliderOptions">
+      <ion-slide *ngFor="let tabItem of tabsList; let i = index;">
+
+        <h2 class="text-white">$<br>AMMOUNT INFO</h2>
+        <br>
+
+        <ion-card *ngIf="items.length != 0">
+          <ion-card-content>
+            <ion-list>
+
+              <ion-item *ngFor="let item of items" (click)="openModal(item)">
+                <ion-icon name="arrow-round-{{ item.price[i] >=0 ? 'up' : 'down' }}" item-left
+                          color="{{ item.price[i] >=0 ? 'secondary' : 'danger' }}"></ion-icon>
+                <h2>
+                  <small>{{ item.house }}</small>
+                  {{ item.street }} |
+                  <small>{{ item.city }}</small>
+                </h2>
+                <p>{{ item.country }}</p>
+                <ion-icon name="more" item-right></ion-icon>
+              </ion-item>
+
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-slide>
+    </ion-slides>
+
+    <ion-footer no-border>
+      <ion-toolbar>
+
+        <ion-segment [(ngModel)]="tab" color="primary">
+          <ion-segment-button *ngFor="let tabItem of tabsList" value="{{tabItem}}"
+                              (ionSelect)="onSegmentSelect(tabItem)">
+            {{tabItem | uppercase}}
+          </ion-segment-button>
+        </ion-segment>
+
+      </ion-toolbar>
+    </ion-footer>
+
+  </ion-slide>
+
+
+</ion-slides>

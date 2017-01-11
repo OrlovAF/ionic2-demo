@@ -1,0 +1,162 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+//html, body {
+//  position: relative;
+//  height: 100%;
+//}
+//body {
+//  background: #fff;
+//  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+//  font-size: 14px;
+//  color:#000;
+//  margin: 0;
+//  padding: 0;
+//}
+//.swiper-container {
+//  width: 100%;
+//  height: 100%;
+//}
+//.swiper-slide {
+//  font-size: 18px;
+//  height: auto;
+//  -webkit-box-sizing: border-box;
+//  box-sizing: border-box;
+//  padding: 30px;
+//}
+
+.icon-2x {
+  font-size: 2.5em;
+}
+
+.bg-primary {
+  background: color($colors, primary);
+}
+
+.half-bg-primary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40%;
+  background: color($colors, primary);
+  width: 100%;
+  display: block;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.avatar-initials {
+  display: inline-block;
+  font-size: 1em;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  //border-radius:50%;
+  background: plum;
+  vertical-align: middle;
+  margin-right: 1em;
+  color: white;
+}
+
+.avatar-initials-bg-1 {
+  background: #1abc9c;
+}
+
+.avatar-initials-bg-2 {
+  background: #2ecc71;
+}
+
+.avatar-initials-bg-3 {
+  background: #3498db;
+}
+
+.avatar-initials-bg-4 {
+  background: #9b59b6;
+}
+
+.avatar-initials-bg-5 {
+  background: #34495e;
+}
+
+.avatar-initials-bg-6 {
+  background: #16a085;
+}
+
+.avatar-initials-bg-7 {
+  background: #27ae60;
+}
+
+.avatar-initials-bg-8 {
+  background: #2980b9;
+}
+
+.avatar-initials-bg-9 {
+  background: #8e44ad;
+}
+
+.avatar-initials-bg-10 {
+  background: #2c3e50;
+}
+
+.avatar-initials-bg-11 {
+  background: #f1c40f;
+}
+
+.avatar-initials-bg-12 {
+  background: #e67e22;
+}
+
+.avatar-initials-bg-13 {
+  background: #e74c3c;
+}
+
+.avatar-initials-bg-14 {
+  background: #95a5a6;
+}
+
+.avatar-initials-bg-15 {
+  background: #f39c12;
+}
+
+.avatar-initials-bg-16 {
+  background: #d35400;
+}
+
+.avatar-initials-bg-17 {
+  background: #c0392b;
+}
+
+.avatar-initials-bg-18 {
+  background: #bdc3c7;
+}
+
+.avatar-initials-bg-19 {
+  background: #7f8c8d;
+}
+
+//
+.card-md .item-md.item-block .item-inner {
+  border-bottom: 1px solid #dedede;
+}
+
+.list-md > .item-block:last-child ion-label,
+.list-md > .item-block:last-child .item-inner,
+.list-md > .item-wrapper:last-child ion-label,
+.list-md > .item-wrapper:last-child .item-inner {
+  border-bottom: 0;
+}
